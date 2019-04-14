@@ -1,2 +1,2 @@
 # Прогноз погоды
-gismeteo API + greensock
+Яндекс.Погода + greensock

@@ -1,2 +1,2 @@
-# weather_app
+# Прогноз погоды
 gismeteo API + greensock

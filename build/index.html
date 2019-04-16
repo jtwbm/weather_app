@@ -11,12 +11,24 @@
 	<div id="weatherApp">
 		<div class="content">
 			<h1>weatherapp</h1>
-			<h2>{{ title }}</h2>
+			<h2>{{ activeSlide === 0 ? weatherTitle : moonTitle }}</h2>
 
-			<ul class="list">
+			<div class="switcher">
+				<button class="switcher__item" @click="activeSlide = 0" :class="{ active: activeSlide === 0 }"></button>
+				<button class="switcher__item" @click="activeSlide = 1" :class="{ active: activeSlide === 1 }"></button>
+			</div>
+
+			<ul class="list" v-if="activeSlide === 0">
 				<li class="list__item" v-for="list in weather">
 					<div class="list__col">{{ list.caption }}</div>
 					<div class="list__col">{{ list.value }} {{ list.suffix }}</div>
+				</li>
+			</ul>
+
+			<ul class="list" v-if="activeSlide === 1">
+				<li class="list__item" v-for="list in moon">
+					<div class="list__col">{{ list.caption }}</div>
+					<div class="list__col">{{ list.value }}</div>
 				</li>
 			</ul>
 

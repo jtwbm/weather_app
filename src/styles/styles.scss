@@ -50,6 +50,7 @@ h2 {
 		align-items: stretch;
 		padding: 2rem 0;
 		border-bottom: 1px solid rgba(255,255,255,.3);
+		line-height: 1;
 
 		&:first-child {
 			border-top: 1px solid rgba(255,255,255,.3);
@@ -64,4 +65,27 @@ footer {
 	width: 100%;
 	bottom: 0;
 	left: 0;
+}
+
+.switcher {
+	text-align: center;
+	margin-bottom: 2rem;
+
+	&__item {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: none;
+		background: rgba(255,255,255,.4);
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+
+		&.active {
+			background-color: rgba(255,255,255,.8);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
 }
